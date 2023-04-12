@@ -20,8 +20,9 @@ export function FeedbackForm({ onSubmit }) {
                 <fieldset>
                     <h2>Feedback Form</h2>
                     <div className='Field'>
-                        <label>Score: {score} 🌟</label>
+                        <label htmlFor='score'>Score: {score} 🌟</label>
                         <input
+                            id='score'
                             value={score}
                             onChange={(e) => { setScore(e.target.value) }}
                             type='range'
@@ -30,8 +31,9 @@ export function FeedbackForm({ onSubmit }) {
                         />
                     </div>
                     <div className='Field'>
-                        <label>Comments:</label>
+                        <label htmlFor='comment'>Comments:</label>
                         <textarea
+                            id='comment'
                             placeholder={textAreaPlaceholder}
                             name='comment'
                             value={comment}
